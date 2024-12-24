@@ -1,0 +1,14 @@
+{
+  "http-request": {
+    "path": "/register-user",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+    }
+  },
+  "http-response": {
+    "status": 400
+  }
+}

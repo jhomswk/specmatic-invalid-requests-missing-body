@@ -1,0 +1,19 @@
+services:
+
+  specmatic:
+    container_name: specmatic
+    image: znsio/specmatic:2.0.48
+    volumes:
+      - ./service:/usr/src/app/service
+    ports:
+      - "9000:9000"
+    command:
+      stub service/contracts/openapi.yaml
+      --examples service/examples
+      --port 9000
+      --strict
+    healthcheck:
+      test: [ CMD, curl, -f, http://localhost:9000/actuator/health ]
+      interval: 5s
+      timeout: 2s
+      retries: 10

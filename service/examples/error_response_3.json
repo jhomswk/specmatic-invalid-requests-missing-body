@@ -1,0 +1,9 @@
+{
+  "http-request": {
+    "path": "/register-user",
+    "method": "POST"
+  },
+  "http-response": {
+    "status": 400
+  }
+}
